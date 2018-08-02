@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeeAjaxModelStoreContainer" CdmEntityContainer="EmployeeAjaxEntities">
+    <EntitySetMapping Name="Employee">
+      <EntityTypeMapping TypeName="EmployeeAjaxModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteEmployee" FunctionName="EmployeeAjaxModel.Store.DeleteEmployee" />
+    <FunctionImportMapping FunctionImportName="InsertUpdateEmployee" FunctionName="EmployeeAjaxModel.Store.InsertUpdateEmployee" />
+    <FunctionImportMapping FunctionImportName="SelectEmployee" FunctionName="EmployeeAjaxModel.Store.SelectEmployee">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmployeeAjaxModel.SelectEmployee_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
